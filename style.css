@@ -14,13 +14,12 @@ footer{
 }
 .main-content{
 
-    display: flex;
-
+    display: flex;  
 }
 .main-content .box{
 
     flex-basis: 50%;
-    padding: 10px 20px;
+    padding: 30px 50px;
 
 }
 .box h2{
@@ -32,7 +31,28 @@ footer{
 }
 .box .content{
 
-    margin: 20px 0 0 0;
+    margin: 40px 0 0 0;
+    position: relative;
+
+}
+.box.content:after{
+
+    position:absolute;
+    content:'';
+    width: 15px;
+    height: 2px;
+    background: #f12020;
+    top: -10px;
+}
+.box.content:before{
+
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: #1a1a1a;
+    top: -10px;
+
 
 }
 .box .content .social{
@@ -40,7 +60,7 @@ footer{
     margin: 20px 0 0 0;
 
 }
-.box .content .social a{
+.box.content .social a{
 
     padding: 0 2px;
 
@@ -57,3 +77,91 @@ footer{
     
 }
 
+.right form input, .right textarea{
+
+    width: 100%;
+    font-size: 17px;
+    background: #151515;
+    padding-left: 10px;
+    border: 1px solid #222222;
+}
+.right form input{
+
+    height: 35px;
+}
+.right form input:focus,
+.right form textarea:focus{
+
+    outline-color: #3498db;
+}
+.right form .text{
+
+    font-size: 17px;
+    margin-bottom: 2px;
+    color: #656565;
+}
+.right form .btn{
+
+    margin-top: 10px;
+}
+.right form .btn button{
+
+    height: 40px;
+    width: 100%;
+    background: #f12020;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 3s;
+
+}
+.right form .btn button:hover{
+
+    background: #000;
+}
+
+.bottom .center{
+
+    padding: 5px;
+    font-size: 15px;
+    background: #151515;
+    text-align: center;
+}
+.bottom .center span{
+
+    color: #656565;
+}
+.bottom .center a{
+
+    color: #f12020;
+    text-decoration: none;
+}
+.bottom .center a:hover{
+
+    text-decoration: underline;
+}
+
+    @media screen and (max-width: 900px){
+
+        footer{
+
+            position: fixed;
+            bottom: 0px;
+        }
+        .main-content{
+
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        .main-content .box{
+
+            margin: 5px 0;
+        }
+
+    }
+
+        
+
+    
+
+    
